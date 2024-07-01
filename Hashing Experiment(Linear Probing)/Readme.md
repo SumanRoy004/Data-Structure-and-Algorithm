@@ -1,0 +1,1 @@
+- ## Create a hash table of size m=100, using hashing with linear probing. Insert n random values in the hash table and perform 1000 search operations on the hash table. Calculate the average number of comparisons per search. The value of n are as follows n=10, 30, 50, 70,90. Plot a graph of alpha=n/m v/s avg. no. of comparisons per search. Hash function h(k,i)=(k mod m+i)mod m.
