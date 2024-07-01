@@ -1,0 +1,1 @@
+- ## Implement merge sort and quick sort on random arrays of size 1000, 2000, 3000, 4000, 5000. Performing the experiment for each array size 100 times. Take the average no. of comparisons. Plot a graph of number of comparisons vs array size for each sorting technique in the same graph.
