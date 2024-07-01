@@ -15,7 +15,7 @@ temp->rank=1;
 temp->parent=temp;
 return (temp);
 }
-int find(int x)                        /*Here I forgot to change the rank of the main parent after path compression,that's why it gives wrong result.*/
+int find(int x)       
 {  if(val[x]==val[x]->parent)
    {  return (val[x]->parent->data);
    }
