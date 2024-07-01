@@ -1,0 +1,1 @@
+- ## Implement a stack which stores integers and performs push pop operations using array and linked list.
