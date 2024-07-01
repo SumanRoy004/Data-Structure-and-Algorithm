@@ -1,0 +1,1 @@
+- ## Create a hash table of size m=100, using hashing with chaining. Insert n random values in the hash table and perform 1000 search operations on the hash table. Calculate the average number of comparisons per search. The value of n are as follows n=50, 100, 300, 500, 700. Plot a graph of alpha=n/m v/s avg. no. of comparisons per search. Hash function h(k)=k mod m.
