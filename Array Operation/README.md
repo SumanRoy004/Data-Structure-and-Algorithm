@@ -1,0 +1,1 @@
+- ## Write a menu-driven program that inserts and deletes at the beginning, end,  and kth position of the array and also accesses the kth position to display or change the contents of the kth position.
