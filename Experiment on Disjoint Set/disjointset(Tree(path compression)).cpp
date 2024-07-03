@@ -4,18 +4,18 @@ using namespace std;
 int noc=0;
 typedef struct node
 { int data;
-int rank;
+int subset_size;
 node* parent;
 }node;
 unordered_map<int,node*> val;
 node* makeset(int x)
 { node* temp=(node*)malloc(sizeof(node));
 temp->data=x;
-temp->rank=1;
+temp->subset_size=1;
 temp->parent=temp;
 return (temp);
 }
-int find(int x)       
+int find(int x)                    
 {  if(val[x]==val[x]->parent)
    {  return (val[x]->parent->data);
    }
@@ -24,19 +24,19 @@ int find(int x)
    return (val[x]->parent->data);
 }
 void Union(int x,int y)
-{if(find(x)!=find(y))
-{if(val[find(x)]->rank>val[find(y)]->rank)
-   {     val[find(y)]->parent=val[find(x)];
-   }
-  else
-    if(val[find(x)]->rank<val[find(y)]->rank)
-    {       val[find(x)]->parent=val[find(y)];
-	}
-	else
-	{  val[find(y)]->parent=val[find(x)];
-	   val[find(x)]->rank=val[find(x)]->rank+1;  
+{ int px=find(x);
+  int py=find(y);
+if(px!=py)
+ {if((val[px]->subset_size)>=(val[py]->subset_size))
+    {    val[py]->parent=val[px];
+         (val[px]->subset_size)+=(val[py]->subset_size);  
     }
-}
+  else
+    if((val[px]->subset_size)<(val[py]->subset_size))
+    {       val[px]->parent=val[py];
+           (val[py]->subset_size)+=(val[px]->subset_size); 
+    }
+ }
 }
 int main()
 { int n,m,x,y,z,flag;
