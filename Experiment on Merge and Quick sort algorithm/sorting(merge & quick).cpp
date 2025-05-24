@@ -50,17 +50,17 @@ void quicksort(int* a,int l,int r)
   { while(a[i]<=pivot && i<=r-1)
     { i++;
     noc_2=noc_2+1;
-	}
-	while(a[j]>pivot && j>=l+1)
-	{ j--;
-	noc_2=noc_2+1;
-	}
-	if(i<j)
-	{ int temp=a[i];
-	a[i]=a[j];
-	a[j]=temp;
-	noc_2=noc_2+1;
-	}
+    }
+    while(a[j]>pivot && j>=l+1)
+    { j--;
+      noc_2=noc_2+1;
+    }
+    if(i<j)
+    { int temp=a[i];
+      a[i]=a[j];
+      a[j]=temp;
+      noc_2=noc_2+1;
+    }
   }
   int temp=a[j];
   a[j]=a[l];
