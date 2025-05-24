@@ -47,11 +47,11 @@ void quicksort(int* a,int l,int r)
 { if(r>l)
   { int pivot=a[l],i=l,j=r;
   while(i<j)
-  { while(a[i]<=pivot)
+  { while(a[i]<=pivot && i<=r-1)
     { i++;
     noc_2=noc_2+1;
 	}
-	while(a[j]>pivot)
+	while(a[j]>pivot && j>=l+1)
 	{ j--;
 	noc_2=noc_2+1;
 	}
