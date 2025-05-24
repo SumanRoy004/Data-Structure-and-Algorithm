@@ -5,7 +5,7 @@ int noc_1=0,nos_1=0,noc_2=0,nos_2=0,noc_3=0,nos_3=0;
 void selectionsort(int* a,int size)
 { int i,j;
 for(i=0;i<size-1;i++)
-{ int k;
+{ int k=i;
 for(j=i+1;j<size;j++)
 { noc_1=noc_1+1;
 if(a[i]>a[j])
